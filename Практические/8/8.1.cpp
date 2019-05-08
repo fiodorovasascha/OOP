@@ -1,5 +1,4 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <string>
 using namespace std;
@@ -13,12 +12,13 @@ int main(int argc, char* argv[])
 		while (!file.eof()) {
 			file >> line;
 			cout << line << endl;
+			//}
+			file.close();
 		}
-		file.close();
 	}
 	else {
 		cout << "Файл закрыт.";
 	}
 	system("pause");
 	return 0;
-}
+	}
