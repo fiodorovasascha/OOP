@@ -84,7 +84,7 @@ int main()
 	cin >> post;
 	switch (post) {
 	case 1:
-		cout << "Стоимость Вашем поездки с учетом 10% скидки будет = " << result.Skidka() << endl;
+		cout << "Стоимость Вашем поездки с учетом 10% скидки будет = " << result.Skidka() <<"$"<<endl;
 		break;
 	case  0:
 		cout << "Извините, у нас нет для Вас скидки." << endl;
