@@ -10,7 +10,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-const int NotUsed = system("color 3E"); //цвета! табличка в интернете есть, всего 15 комбинаций на фон и на шрифт
+const int NotUsed = system("color 2E"); //цвета! табличка в интернете есть, всего 15 комбинаций на фон и на шрифт
 
 const enum ConsoleColor
 {

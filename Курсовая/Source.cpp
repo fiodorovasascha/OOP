@@ -20,7 +20,7 @@ void Decoration::x(int x, int y) {
 }
 
 void Decoration::hello() {
-	SetColor(LightRed, Red);
+	SetColor(Yellow, Yellow);
 
 	x(0, 0); x(2, 0); x(4, 0); x(8, 0); x(12, 0); x(16, 0); x(18, 0);
 	x(19, 0);
@@ -51,7 +51,7 @@ void Decoration::hello() {
 	x(24, 10);  x(28, 10); x(33, 10); x(35, 10); x(42, 10);
 	x(48, 10); x(50, 10); x(51, 10); x(57, 10); x(59, 10);
 	cout << endl << endl << endl;
-	SetColor(White, Cyan);
+	SetColor(Yellow, Green);
 }
 
 void poisk(Vacation a[16], Vacation b[2]) {
@@ -65,7 +65,7 @@ void poisk(Vacation a[16], Vacation b[2]) {
 	getline(cin, s);
 	v.continent = s;
 	cout << "Страна: Германия, Англия, Шолтандия, Финляндия, Швейцария, Норвегия, Италия, Греция, Испания - для Европы"<<endl;
-	cout << "Бали, Шри-Ланка, Таиланд, Китай - для Азии"<<" "<<endl;
+	cout << "Бали, Шри-Ланка, Таиланд, Китай - для Азии"<<""<<endl;
 	getline(cin, s);
 	v.country = s;
 	cout << "Вид отдыха(Море, Экскурсия, Горнолыжный курорт): ";
