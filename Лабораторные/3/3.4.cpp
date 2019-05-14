@@ -35,10 +35,11 @@ int main()
 	cout << "q1`s module = " << q1.get_module() << endl << endl;
 
 	q2.set(-1, 1);
-	q2.sum(v1);
-	q2.diff(v1);
+	q2.sum(q1);
+	q2.diff(q1);
 	q2.gettt();
 	cout << "q2`s module = " << q2.get_module() << endl << endl;
 	system("pause");
 	return 0;
 }
+

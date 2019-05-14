@@ -16,7 +16,7 @@ public:
 		im = image;
 	}
 	void module() {
-		modul = sqrt(pow(re, 2) + pow(img, 2));
+		modul = sqrt(pow(re, 2) + pow(im, 2));
 	}
 	void gettt() {
 		cout << "Действчительная часть = " << re << endl;

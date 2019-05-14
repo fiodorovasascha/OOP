@@ -18,9 +18,9 @@ public:
 		age = a;
 	}
 	void display() {
-		cout << "Имя ребенка: " << firstname << endl;
-		cout << "Фамилия ребенка: " << lastName << endl;
-		cout << "Возраст ребенка: " << age << endl;
+		cout << "Child`s name: " << firstname << endl;
+		cout << "Child`s lastname: " << lastName << endl;
+		cout << "Age: " << age << endl;
 		cout << endl << endl;;
 	}
 };
@@ -42,5 +42,3 @@ int main()
 	Michael.display();
 
 	system("pause");
-	return 0;
-}

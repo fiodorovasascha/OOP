@@ -41,7 +41,7 @@ int main() {
 	q2.sum(q1);
 	q2.diff(q1);
 	q2.gettt();
-	cout << "v2 module = " << q2.get_module() << endl << endl;
+	cout << "q2`s module = " << q2.get_module() << endl << endl;
 
 
 	system("pause");

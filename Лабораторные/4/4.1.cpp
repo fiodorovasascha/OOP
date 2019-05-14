@@ -15,11 +15,11 @@ public:
 	}
 
 	void module() {
-		modul = sqrt(pow(re, 2) + pow(img, 2));
+		modul = sqrt(pow(re, 2) + pow(im, 2));
 	}
 	void display() {
 		cout << "Действительная часть = " << re << endl;
-		cout << "Мнимая часть = " << img << endl;
+		cout << "Мнимая часть = " << im << endl;
 		cout << "Модуль компл. числа = " << modul << endl << endl;
 	}
 };
