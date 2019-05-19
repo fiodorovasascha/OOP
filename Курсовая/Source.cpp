@@ -54,18 +54,19 @@ void Decoration::hello() {
 	SetColor(Yellow, Green);
 }
 
-void poisk(Vacation a[16], Vacation b[2]) {
+vector <Vacation> poisk(Vacation a[16], Vacation b[2]) {
 	vector <Vacation> v1;
 	vector <Vacation> v2;
+	v2.push_back(b[0]);
+	v2.push_back(b[1]);
 	Vacation v = {};
-
 	string s = "";
 	cout << "Введите критерии поиска" << endl;
 	cout << "Часть света(Европа, Азия): ";
 	getline(cin, s);
 	v.continent = s;
-	cout << "Страна: Германия, Англия, Шолтандия, Финляндия, Швейцария, Норвегия, Италия, Греция, Испания - для Европы"<<endl;
-	cout << "Бали, Шри-Ланка, Таиланд, Китай - для Азии"<<""<<endl;
+	cout << "Страна: Германия, Англия, Шолтандия, Финляндия, Швейцария, Норвегия, Италия, Греция, Испания - для Европы" << endl;
+	cout << "Бали, Шри-Ланка, Таиланд, Китай - для Азии" << "" << endl;
 	getline(cin, s);
 	v.country = s;
 	cout << "Вид отдыха(Море, Экскурсия, Горнолыжный курорт): ";
@@ -108,14 +109,18 @@ void poisk(Vacation a[16], Vacation b[2]) {
 	cout << endl;
 	cout << "Обратите внимание, сейчас есть горящие путевки. Поспешите, осталось мало мест!:" << endl;
 	b[0].returnnn(); b[1].returnnn();
-
-	if (v2.size() == 0) { cout << "Извините, по вашему запросу нет совпадений! Попробуйте начать заново"; }
+	cout << endl;
+	if (v2.size() == 2) {
+		cout << "Извините, по вашему запросу нет совпадений! Попробуйте начать заново." << endl;
+		cout << "Либо можете воспользоваться нашими горячими путевками!" << endl;
+	}
 	else {
-		cout << "Мы нашли для Вас " << v2.size() << " направлений(-я)!" << endl << endl;
-		for (int i = 0; i < v2.size(); i++) {
+		cout << "Мы нашли для Вас " << v2.size() - 2 << " направлений(-я)!" << endl << endl;
+		for (int i = 2; i < v2.size(); i++) {
 			v2[i].returnnn();
 		}
 	}
+	return v2;
 }
 
 int Vacation::Skidka() {
@@ -124,12 +129,12 @@ int Vacation::Skidka() {
 }
 
 void Vacation::returnnn() {
-	cout << "Часть света: " << continent << ";";
+	cout << endl << "Часть света: " << continent << ";";
 	cout << " Страна: " << country << ";";
-	cout << " Тип отдыха: " << type << ";";
-	cout << " Количество звёзд: " << number_of_stars << ";";
+	cout << " Тип отдыха: " << type << ";" << endl;
+	cout << "Количество звёзд: " << number_of_stars << ";";
 	cout << " Плата/день: " << payment << "$" << ";";
-	cout << " Количество дней: " << days << ";" << endl << endl;;
+	cout << " Количество дней: " << days << ";" << endl;
 }
 
 double Vacation::Search_Criteria(Vacation v) {

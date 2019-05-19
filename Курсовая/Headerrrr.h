@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #ifndef HEADER_H
 #define HEADER_H
 
@@ -10,7 +10,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-const int NotUsed = system("color 2E"); //цвета! табличка в интернете есть, всего 15 комбинаций на фон и на шрифт
+const int NotUsed = system("color 2E"); 
 
 const enum ConsoleColor
 {
@@ -58,6 +58,6 @@ public:
 	void hello();
 };
 
-void poisk(Vacation a[16], Vacation b[2]);
+vector <Vacation> poisk(Vacation a[16], Vacation b[2]);
 
 #endif // !HEADER_H

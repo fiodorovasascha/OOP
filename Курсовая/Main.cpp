@@ -1,4 +1,6 @@
-﻿#include "Headerrrr.h"
+﻿
+
+#include "Headerrrr.h"
 
 
 int main()
@@ -7,7 +9,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "Rus");
-	system("mode con cols=120 lines=40");
+	system("mode con cols=80 lines=30");
 
 	Decoration d;
 	d.hello();
@@ -31,7 +33,7 @@ int main()
 		else break;
 	}
 
-
+	system("cls");
 	Vacation a[16];
 	a[0] = { "Европа", "Германия", "Экскурсия", "3", "15", "14" };
 	a[1] = { "Европа", "Англия", "Экскурсия", "4", "25", "10" };
@@ -54,13 +56,15 @@ int main()
 	b[0] = { "Азия","Египет","Море","3","10","14" };
 	b[1] = { "Азия","Турция","Море","4","12","14" };
 
-
+	vector <Vacation> res;
 	while (true) {
-		poisk(a, b);
+		res = poisk(a, b);
 		cout << endl << "Желаете поискать еще?(1/0)";
 		int ans;
 		cin >> ans;
 		if (ans == 0) break;
+		string s1; //очищаем последующие поиски от ентера, чтобы часть света не скипалась
+		getline(cin, s1);
 		system("cls");
 	}
 
@@ -70,26 +74,28 @@ int main()
 	int num = 0;
 	cin >> num;
 	Vacation result;
-	if (num == 1) {
-		result = b[0];
-	}
-	else if (num == 2) {
-		result = b[1];
-	}
-	else {
-		result = a[num - 1];
-	}
+	result = res[num - 1];
+	system("cls");
 	cout << "Вы постоянный клиент? (1 - да, 0 - нет)";
 	int post;
 	cin >> post;
+
 	switch (post) {
 	case 1:
-		cout << "Стоимость Вашем поездки с учетом 10% скидки будет = " << result.Skidka() <<"$"<<endl;
+		cout << "Ваш выбор:" << endl;
+		result.returnnn();
+		cout << endl << "Стоимость Вашей поездки с учетом 10% скидки будет = " << result.Skidka() << "$" << endl << endl;
 		break;
 	case  0:
-		cout << "Извините, у нас нет для Вас скидки." << endl;
+		cout << "Ваш выбор:" << endl;
+		result.returnnn();
+		cout << endl << "Оформите карту постоянного клиента для получения скидок и бонусов!" << endl << endl;
+		cout << "Стоимость поездки составит " << stoi(result.days) * stoi(result.payment) << "$" << endl;
 		break;
 	}
-
+	cout << endl << "Спасибо за использование программы!" << endl;
+	cout << "Для выхода нажмите любую клавишу...";
+	int g;
+	g = _getch();
 	return 0;
 }
