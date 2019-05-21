@@ -10,7 +10,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-const int NotUsed = system("color 2E"); 
+const int NotUsed = system("color 2E");
 
 const enum ConsoleColor
 {
@@ -61,3 +61,4 @@ public:
 vector <Vacation> poisk(Vacation a[16], Vacation b[2]);
 
 #endif // !HEADER_H
+
