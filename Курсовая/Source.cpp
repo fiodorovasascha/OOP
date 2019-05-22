@@ -166,3 +166,16 @@ double Vacation::Search_Criteria(Vacation v) {
 	}
 	return rate / max;
 }
+
+string Airplanes::get_airplane_name(string name) {
+
+	return name;
+}
+
+void Airplanes::set_airplane_number(string airplane_number) {
+	number = airplane_number;
+}
+
+string Airplanes::get_airplane_number(string number) {
+	return number;
+}

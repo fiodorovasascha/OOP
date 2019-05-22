@@ -9,6 +9,7 @@
 #include <windows.h>
 #include <vector>
 #include <algorithm>
+#include <ctime>
 using namespace std;
 const int NotUsed = system("color 2E");
 
@@ -59,6 +60,19 @@ public:
 };
 
 vector <Vacation> poisk(Vacation a[16], Vacation b[2]);
+
+class Airplanes {
+public:
+	string get_airplane_name(string name);
+
+	void set_airplane_number(string airplane_number);
+
+	string get_airplane_number(string name);
+
+private:
+	string name;
+	string number;
+};
 
 #endif // !HEADER_H
 

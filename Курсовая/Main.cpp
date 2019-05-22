@@ -93,6 +93,19 @@ int main()
 		cout << "Стоимость поездки составит " << stoi(result.days) * stoi(result.payment) << "$" << endl;
 		break;
 	}
+	Airplanes airplane;
+	string name, number;
+
+	name = "Boeing 777";
+	srand(time(NULL));
+	int n = rand();
+	number = to_string(n);
+
+	airplane.set_airplane_number(number);
+
+	cout << "Модель Вашего самолета: " << airplane.get_airplane_name(name) << endl;
+	cout << "И его номер: " << " " << airplane.get_airplane_number(number);
+
 	cout << endl << "Спасибо за использование программы!" << endl;
 	cout << "Для выхода нажмите любую клавишу...";
 	int g;
